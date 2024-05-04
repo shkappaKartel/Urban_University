@@ -10,4 +10,4 @@ for i, student in enumerate(students):
     grades_sum = sum(grades[i])
     average_grades[student] = grades_sum / len(grades[i])
 
-print(average_grфades)
+print(average_grades)
