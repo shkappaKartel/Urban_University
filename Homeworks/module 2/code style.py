@@ -2,11 +2,11 @@
 
 # Блоки кода
 
-x, y = 10, 29
+x, y = -10, 29
 
 if x < 0:
     print('Х меньше нуля')
-    z = x**2 + y
+    z = x ** 2 + y
 else:
     print('Х больше нуля')
     z = x - y
@@ -14,12 +14,17 @@ print('Результат', z)
 
 # Ср. с С++
 
-# if (x < 0) { printf('Меньше нуля\n'); z = x**2 + y; } else { printf('Больше нуля\n'); z = x - y; }
+# if (x < 0) {
+#   printf('Меньше нуля\n');
+#   z = x**2 + y; }
+# else {\
+#   printf('Больше нуля\n');
+#   z = x - y; }
 # printf('Получается\n', z)
 
 # Вложенные блоки кода
 
-name = input('Enter your name >>>')
+name = input('Enter your name >>> ')
 if name == 'Ola':
     opponent = 'Ola'
     print('Hi, Ola!')
@@ -32,8 +37,8 @@ else:
             opponent = 'Katy'
             print('Hi, Katy!')
         else:
-            opponent = 'anonymous'
-            print('Hi, anonymous!')
+            opponent = str(name)
+            print(f'Hi, {opponent}!')
 
 # Оператор pass
 
@@ -78,13 +83,13 @@ my_list = [2, 3, 4, 5, 6]
 
 # Reformat кода
 
-x, y = 3, 8
+x, v = -43, 8
 
 if x == 3:
     print(42)
 
 if x < 0:
-    if y > 0:
+    if v > 0:
         print('налево!')
     else:
         print('направо!')
@@ -93,15 +98,15 @@ else:
 
 # Названия переменных
 
-count_of_my_pets = 34
-if count_of_my_pets > 10:
+pets_count = 34
+if pets_count > 10:
     print('I need more space for my pets!')
 
-my_favorite_pets_and_bird = ['cat', 'wolf', 'ostrich']
-if 'lion' in my_favorite_pets_and_bird:
+favor_pets = ['cat', 'wolf', 'ostrich']
+if 'lion' in favor_pets:
     print('Wow!')
 
-my_favorite_pets_and_birds = ['cat', 'wolf', 'ostrich']
+favor_pets = ['cat', 'wolf', 'ostrich']
 # Но такой стиль используется для названий классов
 
 # Рекомендации PEP8
@@ -114,12 +119,12 @@ my_favorite_pets_and_birds = ['cat', 'wolf', 'ostrich']
 
 # Никогда не используйте в названиях переменных одиночные l, I, O!
 
-l = 34
-I = 43
-if l > I:
+num1 = 34
+num2 = 43
+if num1 > num2:
     print()
-O = 9
-if O > 0:
+num0 = 9
+if num0 > 0:
     print()
 
 # lowercase (слово в нижнем регистре)
@@ -136,6 +141,6 @@ if O > 0:
 
 # Автоматическое переименование в PyCharm и подсказки - вам не нужно набирать длинные названия переменных
 
-ss = ['cat', 'wolf', 'ostrich']
-if 'lion' in ss:
+my_pets = ['cat', 'wolf', 'ostrich']
+if 'lion' in my_pets:
     print('Wow!')
