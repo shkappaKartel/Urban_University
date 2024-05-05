@@ -1,10 +1,12 @@
-def test(a, b):
+def test():
+    a = 5
+    b = 10
     print(a, b)
 
-test(1, 4)
+test()
 
 
-def test(a, b, c):
+def test(a, b,*, c):
     print(a, b, c)
 
-test(1, 2, 3)
+test(1, 2, c = 3)
