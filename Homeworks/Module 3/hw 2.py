@@ -1,3 +1,4 @@
+# m3hw2
 def print_params(a=1, b='stroka', c=True):
     print(a, b, c)
     # print(f"a: {a}, b: {b}, c: {c}")
