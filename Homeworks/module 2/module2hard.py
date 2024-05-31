@@ -19,5 +19,3 @@ if num < 3 or num > 20:
 
 if 3 <= num <= 20:
     print(f'[{num}] - [{generate_password(num)}]')
-
-
