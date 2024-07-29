@@ -1,0 +1,2 @@
+text from terminal
+new row from terminal
