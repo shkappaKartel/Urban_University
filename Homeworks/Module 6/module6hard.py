@@ -21,3 +21,4 @@ class Figure:
                 self.__color = (r, g, b)
 
         def __is_valid_sides(self, __sides):
+            pass
