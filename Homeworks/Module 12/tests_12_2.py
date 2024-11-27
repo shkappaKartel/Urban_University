@@ -44,7 +44,18 @@ class Tournament:
         return finishers
 
 
+def skip_if_frozen(test_func):
+    def wrapper(self, *args, **kwargs):
+        cls = self.__class__
+        if getattr(cls, "is_frozen", False):
+            raise unittest.SkipTest("Тесты заморожены")
+        return test_func(self, *args, **kwargs)
+    return wrapper
+
+
 class TournamentTest(TestCase):
+    is_frozen = True
+
     @classmethod
     def setUpClass(cls):
         # Словарь для хранения результатов
@@ -63,6 +74,7 @@ class TournamentTest(TestCase):
             formatted_result = {place: str(runner) for place, runner in result.items()}
             print(formatted_result)
 
+    @skip_if_frozen
     def test_aRace(self):
         # ||| Усэйн - Ник | 90метров |||
         tournament = Tournament(90, self.usain, self.nick)
@@ -72,6 +84,7 @@ class TournamentTest(TestCase):
         # проверка, что Ник последний
         self.assertTrue(results[max(results.keys())] == "Ник")
 
+    @skip_if_frozen
     def test_bRace(self):
         # ||| Андрей - Ник | 90метров |||
         tournament = Tournament(90, self.andrei, self.nick)
@@ -79,6 +92,7 @@ class TournamentTest(TestCase):
         self.__class__.all_results[2] = results
         self.assertTrue(results[max(results.keys())] == "Ник")
 
+    @skip_if_frozen
     def test_trioRace(self):
         # ||| Усэйн - Андрей - Ник | 90метров |||
         tournament = Tournament(90, self.usain, self.andrei, self.nick)
