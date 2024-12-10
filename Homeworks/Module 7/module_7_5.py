@@ -18,4 +18,5 @@ for root, dirs, files, in os.walk(directory):
               f'Путь: {filepath}, '
               f'Размер: {filesize} байт, '
               f'Время изменения: {formatted_time},'
-              f' Родительская директория: {parent_dir}')
+              f'Родительская директория: {parent_dir}')
+    
